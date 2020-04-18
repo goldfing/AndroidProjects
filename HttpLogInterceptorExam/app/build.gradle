@@ -47,6 +47,9 @@ dependencies {
 
     // OkHttp
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.5.0'
+    // Use for HttpLoggingInterceptor
+    implementation group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '4.5.0'
+
 
     implementation group: 'org.conscrypt', name: 'conscrypt-android', version: '2.4.0'
 }
