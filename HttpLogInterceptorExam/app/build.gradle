@@ -6,15 +6,11 @@ android {
     compileSdkVersion 29
 
     // fix for "java.lang.NoSuchMethodError: No static method metafactory  (declaration of 'java.lang.invoke.LambdaMetafactory' appears in /apex/com.android.runtime/javalib/core-oj.jar)"
+    // refer by https://stackoverflow.com/questions/59448845/no-static-method-metafactory
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-
 
     defaultConfig {
         applicationId "com.hans.android.httploginterceptorexam"
@@ -53,20 +49,5 @@ dependencies {
     implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.5.0'
 
     implementation group: 'org.conscrypt', name: 'conscrypt-android', version: '2.4.0'
-
-    // java.lang.ClassNotFoundException: Didn't find class "android.view.View$OnUnhandledKeyEventListener" on path: DexPathList
-    implementation "androidx.core:core:1.2.0"
-
-}
-
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        def requested = details.requested
-        if (requested.group == "com.Android.support") {
-            if (!requested.name.startsWith("multidex")) {
-                details.useVersion "26.+"
-            }
-        }
-    }
 }
 
