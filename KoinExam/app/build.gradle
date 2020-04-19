@@ -59,4 +59,14 @@ dependencies {
     // Koin AndroidX Fragment Factory (unstable version)
     implementation "org.koin:koin-androidx-fragment:$koin_version"
 
+    // Mockito
+    testImplementation group: 'org.mockito', name: 'mockito-android', version: '3.3.3'
+
+    // Truth by google
+    testImplementation group: 'com.google.truth', name: 'truth', version: '1.0.1'
+
+
+
+
+
 }
