@@ -6,7 +6,7 @@ import com.hans.android.koinexam.domain.usecase.SleepTimeUseCase
 import org.koin.dsl.module
 
 var myModule = module {
-    single { SleepTimeUseCase() }
-    single { CityRepository() }
-    single { CityUseCase(get()) }
+    single<SleepTimeUseCase> { SleepTimeUseCase() }
+    single<CityRepository> { CityRepository() }
+    single<CityUseCase> { CityUseCase(get()) }
 }
