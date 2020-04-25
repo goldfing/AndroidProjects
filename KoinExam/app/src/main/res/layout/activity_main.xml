@@ -25,8 +25,23 @@
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Sleep or Play"
+        />
+
+    <Button
+        android:id="@+id/btnCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Seoul"
+        android:onClick="getCity"
+        />
+
+    <TextView
+        android:id="@+id/cityResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="City?"
         />
 
 </LinearLayout>

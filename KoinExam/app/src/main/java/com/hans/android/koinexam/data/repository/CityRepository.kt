@@ -1,6 +1,6 @@
 package com.hans.android.koinexam.data.repository
 
-open class CityRepository {
+class CityRepository {
     private val cities = listOf<String>("Seoul", "Busan", "Incheon")
 
     fun getCities() : List<String> {
@@ -12,6 +12,6 @@ open class CityRepository {
     }
 
     fun isExistsCity(name: String): Boolean {
-        return cities.indexOf(name) < 0
+        return cities.indexOf(name) > 0
     }
 }

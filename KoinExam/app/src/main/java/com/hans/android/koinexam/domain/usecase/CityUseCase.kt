@@ -2,7 +2,7 @@ package com.hans.android.koinexam.domain.usecase
 
 import com.hans.android.koinexam.data.repository.CityRepository
 
-open class CityUseCase(private val cityRepository: CityRepository) {
+class CityUseCase(private val cityRepository: CityRepository) {
 
     fun getCities(): List<String> {
         return cityRepository.getCities()
